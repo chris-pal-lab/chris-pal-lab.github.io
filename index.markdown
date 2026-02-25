@@ -2,13 +2,14 @@
 layout: default
 title: Home
 permalink: /
-description: Homepage for the Chris Pal Research Group, featuring research areas, people, and recent news.
+description: Homepage for the Chris Pal Lab, featuring research areas, people, and recent news.
 ---
 
 <div class="lab-home">
   <section class="lab-hero">
+    <img class="hero-mark" src="{{ '/assets/images/lab-mark.svg' | relative_url }}" alt="" aria-hidden="true">
     <p class="eyebrow">Academic Research Group</p>
-    <h1>Chris Pal Research Group</h1>
+    <h1>Chris Pal Lab</h1>
     <p>We build machine learning systems that connect strong theoretical foundations with practical impact across language, vision, and multimodal AI.</p>
     <div class="hero-links">
       <a class="button-link" href="{{ '/people/' | relative_url }}">Meet the Team</a>

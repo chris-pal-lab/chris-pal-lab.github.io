@@ -2,7 +2,7 @@
 layout: page
 title: People
 permalink: /people/
-description: Faculty, postdocs, students, and collaborators in the Chris Pal Research Group.
+description: Faculty, postdocs, students, and collaborators in the Chris Pal Lab.
 ---
 
 <div class="people-page">

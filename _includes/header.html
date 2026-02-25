@@ -1,6 +1,9 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      <img class="site-mark" src="{{ '/assets/images/lab-mark.svg' | relative_url }}" alt="" aria-hidden="true">
+      <span>{{ site.title | escape }}</span>
+    </a>
 
     <nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />

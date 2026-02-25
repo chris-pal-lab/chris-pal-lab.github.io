@@ -1,7 +1,7 @@
-title: Chris Pal Research Group
+title: Chris Pal Lab
 email: group@example.edu
 description: >-
-  The Chris Pal Research Group works on machine learning, natural language processing, computer vision, and generative modeling.
+  The Chris Pal Lab works on machine learning, natural language processing, computer vision, and generative modeling.
 baseurl: ""
 url: "https://chris-pal-group.github.io"
 domain: "chris-pal-group.github.io"
@@ -31,6 +31,6 @@ author:
 logo: /assets/images/headshots/chris_pal.jpeg
 
 social:
-  name: Chris Pal Research Group
+  name: Chris Pal Lab
   links:
     - https://github.com/chris-pal-group

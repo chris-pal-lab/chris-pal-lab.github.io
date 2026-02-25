@@ -2,7 +2,7 @@
 layout: page
 title: Publications
 permalink: /publications/
-description: Publications from the Chris Pal Research Group, searchable and organized by year.
+description: Publications from the Chris Pal Lab, searchable and organized by year.
 ---
 
 <div class="publications-page">

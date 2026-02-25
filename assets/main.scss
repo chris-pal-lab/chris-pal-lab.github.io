@@ -4,15 +4,19 @@
 @import "minima";
 
 :root {
-  --bg: #f4f8fb;
+  --bg: #f3f6fa;
   --surface: #ffffff;
-  --surface-soft: #f8fcff;
+  --surface-soft: #f7fbff;
   --ink: #10243a;
   --ink-soft: #4f6178;
   --line: #d5e2ef;
-  --accent: #0f8b8d;
-  --accent-strong: #0a6f71;
-  --accent-warm: #d66f37;
+  --poly-red: #d3012f;
+  --poly-orange: #f28c00;
+  --poly-green: #01ea53;
+  --poly-blue: #50bbe6;
+  --accent: #2a7ea0;
+  --accent-strong: #1d6c8d;
+  --accent-warm: var(--poly-red);
 }
 
 [data-theme="dark"] {
@@ -22,25 +26,19 @@
   --ink: #e5eef9;
   --ink-soft: #a8bfd6;
   --line: #30445b;
-  --accent: #58b6b8;
-  --accent-strong: #89d2d3;
-  --accent-warm: #f0a36f;
+  --poly-red: #f06a73;
+  --poly-orange: #ffbb5b;
+  --poly-green: #60f58d;
+  --poly-blue: #8edbff;
+  --accent: #7bc8ea;
+  --accent-strong: #a8e0f7;
+  --accent-warm: var(--poly-red);
 }
 
 body {
   color: var(--ink);
   font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
-  background:
-    radial-gradient(circle at 0% 0%, #e4f4f5 0%, transparent 42%),
-    radial-gradient(circle at 100% 100%, #ffe8db 0%, transparent 44%),
-    var(--bg);
-}
-
-[data-theme="dark"] body {
-  background:
-    radial-gradient(circle at 0% 0%, #19333a 0%, transparent 42%),
-    radial-gradient(circle at 100% 100%, #3b2a25 0%, transparent 44%),
-    var(--bg);
+  background: var(--bg);
 }
 
 h1,
@@ -64,10 +62,19 @@ a:hover {
 }
 
 .site-header {
-  border-top: 6px solid var(--accent);
+  position: relative;
+  z-index: 40;
+  border-top: 0;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(6px);
+}
+
+.site-header::before {
+  content: "";
+  display: block;
+  height: 6px;
+  background: url("/assets/images/poly-strip.svg") center/cover no-repeat;
 }
 
 [data-theme="dark"] .site-header {
@@ -75,6 +82,9 @@ a:hover {
 }
 
 .site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--ink) !important;
@@ -85,6 +95,12 @@ a:hover {
   color: var(--ink) !important;
 }
 
+.site-mark {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
 .site-nav .page-link {
   margin-left: 18px;
   color: var(--ink);
@@ -93,6 +109,10 @@ a:hover {
 
 .site-nav .page-link:hover {
   color: var(--accent);
+}
+
+.site-nav .menu-icon > svg path {
+  fill: var(--ink-soft);
 }
 
 .theme-toggle {
@@ -132,22 +152,21 @@ a:hover {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 1.8rem;
-  background: linear-gradient(135deg, #0f8b8d 0%, #2f6e9d 55%, #4f5675 100%);
+  padding: 2.15rem 1.8rem 1.8rem;
+  background: #1f4f69;
   color: #ffffff;
   box-shadow: 0 12px 30px rgba(28, 45, 77, 0.12);
   animation: fade-up 500ms ease both;
 }
 
-.lab-hero::after {
+.lab-hero::before {
   content: "";
   position: absolute;
-  right: -64px;
-  top: -64px;
-  width: 220px;
-  height: 220px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 8px;
+  background: url("/assets/images/poly-strip.svg") center/cover no-repeat;
 }
 
 .lab-hero h1 {
@@ -169,6 +188,12 @@ a:hover {
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.hero-mark {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.55rem;
 }
 
 .hero-links {
@@ -295,6 +320,47 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--ink-soft);
+}
+
+.news-timeline {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+.news-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.53rem;
+  top: 0.15rem;
+  bottom: 0.15rem;
+  width: 2px;
+  background: var(--poly-blue);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.timeline-dot {
+  width: 13px;
+  height: 13px;
+  margin-top: 0.34rem;
+  border-radius: 50%;
+  background: var(--poly-red);
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.timeline-content {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.82rem 0.95rem;
+  background: var(--surface-soft);
 }
 
 .people-section,
@@ -534,7 +600,7 @@ a:hover {
 .pub-visual {
   border-radius: 10px;
   border: 1px dashed #a8bfd6;
-  background: linear-gradient(145deg, #f2f8fe, #e7f3fc);
+  background: #eef6fd;
   color: #33516b;
   display: grid;
   place-items: center;
@@ -566,6 +632,40 @@ a:hover {
 }
 
 @media (max-width: 780px) {
+  .site-nav {
+    z-index: 80;
+  }
+
+  .site-nav .trigger {
+    z-index: 90;
+  }
+
+  .site-nav label[for="nav-trigger"] {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
+  .site-nav input ~ .trigger {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 10px 18px rgba(18, 30, 47, 0.22);
+  }
+
+  .site-nav input ~ .trigger .page-link {
+    color: var(--ink);
+  }
+
+  .site-nav input ~ .trigger .page-link:hover {
+    color: var(--accent);
+  }
+
+  .hero-mark {
+    width: 58px;
+    height: 58px;
+  }
+
   .theme-toggle {
     margin: 0.45rem 0 0;
   }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Chris Pal Lab Monogram</title>
+  <desc id="desc">A rounded square CPL badge with Poly-inspired color tabs.</desc>
+  <defs>
+    <clipPath id="badge-clip">
+      <rect x="18" y="18" width="124" height="124" rx="28" />
+    </clipPath>
+  </defs>
+  <rect x="18" y="18" width="124" height="124" rx="28" fill="#10243a" />
+  <rect x="18" y="18" width="124" height="124" rx="28" fill="none" stroke="#d5e2ef" stroke-width="3" />
+  <g clip-path="url(#badge-clip)">
+    <rect x="18" y="18" width="31" height="12" fill="#D3012F" />
+    <rect x="49" y="18" width="31" height="12" fill="#F28C00" />
+    <rect x="80" y="18" width="31" height="12" fill="#01EA53" />
+    <rect x="111" y="18" width="31" height="12" fill="#50BBE6" />
+  </g>
+  <text x="80" y="97" text-anchor="middle" font-family="Avenir Next, Trebuchet MS, Segoe UI, sans-serif" font-size="50" font-weight="800" letter-spacing="1" fill="#ffffff">CPL</text>
+</svg>
