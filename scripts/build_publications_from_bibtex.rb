@@ -5,9 +5,67 @@ require "csv"
 require "optparse"
 require "yaml"
 require "fileutils"
+require "date"
+
+LATEX_ACCENTS = {
+  "'" => {
+    "a" => "á", "e" => "é", "i" => "í", "o" => "ó", "u" => "ú", "y" => "ý",
+    "A" => "Á", "E" => "É", "I" => "Í", "O" => "Ó", "U" => "Ú", "Y" => "Ý"
+  },
+  "`" => {
+    "a" => "à", "e" => "è", "i" => "ì", "o" => "ò", "u" => "ù",
+    "A" => "À", "E" => "È", "I" => "Ì", "O" => "Ò", "U" => "Ù"
+  },
+  "^" => {
+    "a" => "â", "e" => "ê", "i" => "î", "o" => "ô", "u" => "û",
+    "A" => "Â", "E" => "Ê", "I" => "Î", "O" => "Ô", "U" => "Û"
+  },
+  '"' => {
+    "a" => "ä", "e" => "ë", "i" => "ï", "o" => "ö", "u" => "ü", "y" => "ÿ",
+    "A" => "Ä", "E" => "Ë", "I" => "Ï", "O" => "Ö", "U" => "Ü", "Y" => "Ÿ"
+  },
+  "~" => {
+    "a" => "ã", "n" => "ñ", "o" => "õ",
+    "A" => "Ã", "N" => "Ñ", "O" => "Õ"
+  },
+  "c" => {
+    "c" => "ç", "C" => "Ç"
+  },
+  "v" => {
+    "c" => "č", "s" => "š", "z" => "ž", "r" => "ř", "e" => "ě", "n" => "ň",
+    "C" => "Č", "S" => "Š", "Z" => "Ž", "R" => "Ř", "E" => "Ě", "N" => "Ň"
+  }
+}.freeze
+
+LATEX_SYMBOLS = {
+  "\\&" => "&",
+  "\\%" => "%",
+  "\\_" => "_",
+  "\\#" => "#",
+  "\\$" => "$",
+  "\\{" => "{",
+  "\\}" => "}",
+  "~" => " "
+}.freeze
 
 def present?(value)
   !value.nil? && !value.to_s.strip.empty?
+end
+
+def latex_to_unicode(value)
+  text = value.to_s.dup
+
+  text.gsub!(/\\([`'"^"~cv])\{?([A-Za-z])\}?/) do
+    accent = Regexp.last_match(1)
+    letter = Regexp.last_match(2)
+    LATEX_ACCENTS.fetch(accent, {}).fetch(letter, Regexp.last_match(0))
+  end
+
+  LATEX_SYMBOLS.each do |latex, unicode|
+    text.gsub!(latex, unicode)
+  end
+
+  text.gsub(/[{}]/, "")
 end
 
 def split_top_level(input, delimiter = ",")
@@ -134,6 +192,7 @@ def clean_value(raw)
     end
   end
 
+  value = latex_to_unicode(value)
   value.gsub(/\s+/, " ").strip
 end
 
@@ -360,6 +419,36 @@ def year_sort_value(value)
   value.to_s[/\d{4}/].to_i
 end
 
+def normalize_tags(tags)
+  Array(tags).map { |tag| tag.to_s.strip.downcase.gsub(/\s+/, "-") }.reject(&:empty?).uniq
+end
+
+def load_existing_tag_index(path)
+  index = { by_title: {}, by_doi: {} }
+  return index unless File.exist?(path)
+
+  parsed = YAML.safe_load(File.read(path), permitted_classes: [Date, Time], aliases: true)
+  return index unless parsed.is_a?(Array)
+
+  parsed.each do |row|
+    next unless row.is_a?(Hash)
+
+    tags = normalize_tags(row["tags"])
+    next if tags.empty?
+
+    title_key = canonical_title(row["title"])
+    index[:by_title][title_key] = tags if present?(title_key)
+
+    doi_key = normalize_doi(row["doi"])
+    index[:by_doi][doi_key] = tags if present?(doi_key)
+  end
+
+  index
+rescue Psych::Exception => e
+  warn "Warning: Failed to read existing tags from #{path}: #{e.message}"
+  index
+end
+
 options = {
   input_dir: "bibtex",
   csv_out: "bibtex/publications_master.csv",
@@ -452,6 +541,8 @@ CSV.open(options[:csv_out], "w") do |csv|
   end
 end
 
+tag_index = load_existing_tag_index(options[:yaml_out])
+
 yaml_records = final_records.map do |record|
   row = {}
   row["title"] = record["title"]
@@ -467,6 +558,13 @@ yaml_records = final_records.map do |record|
   if present?(record["url"]) && !record["url"].to_s.downcase.include?("arxiv.org")
     row["project_page"] = record["url"]
   end
+
+  existing_tags = nil
+  doi_key = normalize_doi(record["doi"])
+  existing_tags = tag_index[:by_doi][doi_key] if present?(doi_key)
+  existing_tags ||= tag_index[:by_title][canonical_title(record["title"])]
+  existing_tags = normalize_tags(existing_tags)
+  row["tags"] = existing_tags unless existing_tags.empty?
 
   row
 end

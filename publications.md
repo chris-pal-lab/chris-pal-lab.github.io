@@ -44,7 +44,7 @@ description: Publications from the Chris Pal Lab, searchable and organized by ye
           <div class="pub-list">
         {% assign current_year = publication_year %}
       {% endif %}
-      <article class="pub-card" data-year="{{ publication_year }}" data-search="{{ publication.title | default: '' | downcase | escape }} {{ publication.authors | default: '' | downcase | escape }} {{ publication.venue | default: '' | downcase | escape }}">
+      <article class="pub-card" data-year="{{ publication_year }}" data-search="{{ publication.title | default: '' | downcase | escape }} {{ publication.authors | default: '' | downcase | escape }} {{ publication.venue | default: '' | downcase | escape }} {{ publication.tags | join: ' ' | downcase | escape }}">
         <div class="pub-visual">
           {% if publication.visual %}{{ publication.visual }}{% elsif publication.year %}{{ publication.year }}{% else %}Publication{% endif %}
         </div>
@@ -52,6 +52,13 @@ description: Publications from the Chris Pal Lab, searchable and organized by ye
           <h2>{{ publication.title }}</h2>
           {% if publication.authors %}<p>{{ publication.authors }}</p>{% endif %}
           <p class="pub-venue">{{ publication.venue }}</p>
+          {% if publication.tags %}
+          <div class="pub-tags">
+            {% for tag in publication.tags %}
+            <span class="tag-chip">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% if publication.venues %}
           <p class="pub-extra-venues">
             Also appeared in:

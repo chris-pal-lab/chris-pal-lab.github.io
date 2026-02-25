@@ -9,6 +9,9 @@
   - Women in Machine Learning Workshop@ NeurIPS 2025
   - arXiv preprint arXiv:2510.05432
   arxiv: https://arxiv.org/abs/2510.05432
+  tags:
+  - scientific-ai
+  - agentic-ai
 - title: 'LitLLMs, LLMs for Literature Review: Are we there yet?'
   authors: Agarwal*, Shubham and Sahu*, Gaurav and Puri*, Abhay and Laradji, Issam
     H and Dvijotham, Krishnamurthy Dj and Stanley, Jason and Charlin, Laurent and
@@ -19,24 +22,74 @@
   - Transactions on Machine Learning Research
   - arXiv preprint arXiv:2412.15249
   arxiv: https://arxiv.org/abs/2412.15249
+  tags:
+  - llm
+  - nlp
+  - literature-review
+  - scientific-ai
 - title: 'ReviewerToo: Should AI Join The Program Committee? A Look At The Future
     of Peer Review'
   authors: Sahu, Gaurav and Larochelle, Hugo and Charlin, Laurent and Pal, Christopher
   year: 2025
   venue: arXiv preprint arXiv:2510.08867
   arxiv: https://arxiv.org/abs/2510.08867
+  tags:
+  - llm
+  - scientific-ai
+  - evaluation
+- title: Llms can learn self-restraint through iterative self-reflection
+  authors: Piché, Alexandre and Milios, Aristides and Bahdanau, Dzmitry and Pal, Chris
+  year: 2024
+  venue: arXiv preprint arXiv:2405.13022
+  arxiv: https://arxiv.org/abs/2405.13022
+  tags:
+  - llm
+  - safety
+  - robustness
+  - introspection
+  - reasoning
+- title: Self-evaluation and self-prompting to improve the reliability of LLMs
+  authors: Piché, Alexandre and Milios, Aristides and Bahdanau, Dzmitry and Pal, Christopher
+  year: 2024
+  venue: ICLR 2024 Workshop on Secure and Trustworthy Large Language Models
+  tags:
+  - llm
+  - safety
+  - robustness
+  - trustworthy-ai
+  - prompting
+  - evaluation
 - title: Unsupervised depth estimation, 3d face rotation and replacement
   authors: Moniz, Joel Ruben Antony and Beckham, Christopher and Rajotte, Simon and
     Honari, Sina and Pal, Chris
   year: 2018
   venue: Advances in neural information processing systems
+  tags:
+  - vision
+  - generative-modeling
 - title: Deep Convolutional Networks with Non-convolutional Recurrent Memory for Structured
     Prediction
   authors: Moniz, Joel Ruben Antony and Pal, Christopher
   year: 2017
   venue: Workshop on Deep Structured Prediction, ICML 2017
+  tags:
+  - vision
+  - generative-modeling
 - title: Convolutional residual memory networks
   authors: Moniz, Joel and Pal, Christopher
   year: 2016
   venue: arXiv preprint arXiv:1606.05262
   arxiv: https://arxiv.org/abs/1606.05262
+  tags:
+  - vision
+  - generative-modeling
+- title: Generative Floor Plan Design with LLMs via Reinforcement Learning with Verifiable
+    Rewards
+  authors: Lara, Luis and Luo, Zhihao and Milios, Aristides and Sharma, Aditya and
+    Luo, Ge Ya and Beckham, Christopher and Golemo, Florian and Pal, Christopher
+  venue: 'UrbanAI: Harnessing Artificial Intelligence for Smart Cities'
+  tags:
+  - llm
+  - reinforcement-learning
+  - generative-modeling
+  - smart-cities

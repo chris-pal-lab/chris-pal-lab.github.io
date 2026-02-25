@@ -1,0 +1,33 @@
+<meta name="theme-color" content="#d3012f">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "{{ site.title | escape }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "logo": "{{ site.url }}{{ site.logo | relative_url }}",
+  "description": "{{ site.description | strip_newlines | escape }}",
+  "sameAs": [{% for link in site.social.links %}"{{ link }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Polytechnique Montréal",
+    "url": "https://www.polymtl.ca/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title | escape }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}{{ '/publications/' | relative_url }}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

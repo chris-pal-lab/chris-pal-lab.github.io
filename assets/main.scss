@@ -257,13 +257,24 @@ a:hover {
 .focus-list li {
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 0.8rem;
+  padding: 0;
   background: var(--surface-soft);
+}
+
+.focus-link {
+  display: block;
+  padding: 0.8rem;
+  text-decoration: none;
+  color: var(--ink);
 }
 
 .focus-list strong {
   display: block;
   margin-bottom: 0.2rem;
+}
+
+.focus-link:hover {
+  color: var(--accent-strong);
 }
 
 .pi-card {
@@ -367,6 +378,41 @@ a:hover {
 .pub-card,
 .project-card {
   animation: fade-up 580ms ease both;
+}
+
+.area-section {
+  scroll-margin-top: 86px;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
+
+.area-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  padding: 0.9rem;
+}
+
+.area-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.area-list li {
+  margin-bottom: 0.35rem;
+}
+
+.area-meta {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.area-links {
+  margin-top: 0.6rem;
 }
 
 .people-grid {
@@ -614,6 +660,25 @@ a:hover {
 .pub-venue,
 .project-meta {
   color: var(--ink-soft);
+}
+
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0.45rem;
+}
+
+.tag-chip {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.14rem 0.5rem;
 }
 
 .status-pill {

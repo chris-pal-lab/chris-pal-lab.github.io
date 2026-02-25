@@ -1,0 +1,100 @@
+- title: Language Models and NLP
+  description: Large-scale language modeling, reasoning, evaluation, and reliable deployment.
+  publication_tags:
+    - llm
+    - nlp
+    - reasoning
+    - evaluation
+    - prompting
+  keywords:
+    - language
+    - nlp
+    - llm
+    - reasoning
+    - prompt
+    - text
+    - model
+    - scaling
+
+- title: Vision and Generative Modeling
+  description: Computer vision, image/video generation, and visual representation learning.
+  publication_tags:
+    - vision
+    - generative-modeling
+    - video
+    - graphics
+  keywords:
+    - vision
+    - visual
+    - video
+    - image
+    - diffusion
+    - generative
+    - photography
+    - graphics
+
+- title: Multimodal and Embodied AI
+  description: Methods combining modalities with interaction, perception, and action.
+  publication_tags:
+    - multimodal
+    - embodied-ai
+    - navigation
+  keywords:
+    - multimodal
+    - embodied
+    - navigation
+    - affordance
+    - scenes
+    - vector graphics
+    - motion
+    - reconstruction
+
+- title: Robustness, Safety, and Trustworthy AI
+  description: Reliable and interpretable ML systems with strong safety and robustness properties.
+  publication_tags:
+    - safety
+    - robustness
+    - trustworthy-ai
+    - introspection
+  keywords:
+    - robust
+    - reliability
+    - safety
+    - trustworthy
+    - uncertainty
+    - interpretable
+    - causality
+    - introspection
+
+- title: Scientific and Agentic AI
+  description: AI systems for discovery, scientific workflows, and autonomous research support.
+  publication_tags:
+    - scientific-ai
+    - agentic-ai
+    - literature-review
+  keywords:
+    - scientific
+    - co-scientist
+    - agentic
+    - discovery
+    - optimization
+    - research
+    - benchmark
+    - review
+
+- title: Applied ML for Environment, Health, and Accessibility
+  description: High-impact applications in environmental monitoring, computational pathology, and assistive technology.
+  publication_tags:
+    - environment
+    - health
+    - accessibility
+    - smart-cities
+  keywords:
+    - environmental
+    - forest
+    - biodiversity
+    - pathology
+    - assistive
+    - blind
+    - low-vision
+    - hci

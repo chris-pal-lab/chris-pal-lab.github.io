@@ -107,6 +107,17 @@ sections:
           twitter: https://x.com/joelramoniz
           linkedin: https://www.linkedin.com/in/joelmoniz
           scholar: https://scholar.google.com/citations?user=AjpOYxAAAAAJ&hl=en
+      - name: Aristides Milios
+        role: PhD
+        email: aristides.milios@gmail.com
+        headshot: /assets/images/headshots/aristides_milios.jpg
+        blurb: Doctoral researcher in the group.
+        focus: Working on LLM introspection and self-modeling for robustness and safety.
+        links:
+          github: https://github.com/amilios
+          website: https://atmilios.com/
+          scholar: https://scholar.google.com/citations?user=5sCPodgAAAAJ&hl=en
+          linkedin: https://www.linkedin.com/in/aristidesmilios/
 
   - title: MSc Students
     members:
@@ -152,7 +163,8 @@ sections:
         headshot: /assets/images/headshots/mai_ababneh.png
         blurb: External collaborator working with the group.
         focus: Developing navigation assistive technology for the Blind and Visually Impaired community.
-        links: {}
+        links:
+          github: https://github.com/joyous-porpoisem
       - name: Can (Sam) Chen
         role: Collaborator
         email: chencan421@gmail.com

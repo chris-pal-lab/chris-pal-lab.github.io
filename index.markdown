@@ -8,7 +8,6 @@ description: Homepage for the Chris Pal Lab, featuring research areas, people, a
 <div class="lab-home">
   <section class="lab-hero">
     <img class="hero-mark" src="{{ '/assets/images/lab-mark.svg' | relative_url }}" alt="" aria-hidden="true">
-    <p class="eyebrow">Academic Research Group</p>
     <h1>Chris Pal Lab</h1>
     <p>We build machine learning systems that connect strong theoretical foundations with practical impact across language, vision, and multimodal AI.</p>
     <div class="hero-links">
@@ -21,24 +20,16 @@ description: Homepage for the Chris Pal Lab, featuring research areas, people, a
   <section class="lab-panel">
     <h2>Research Focus</h2>
     <ul class="focus-list">
+      {% for area in site.data.research_areas %}
       <li>
-        <strong>Computer Vision and Pattern Recognition</strong>
-        Methods for robust visual understanding, perception, and representation learning across varied data regimes.
+        <a class="focus-link" href="{{ '/research-areas/' | relative_url }}#{{ area.title | slugify }}">
+          <strong>{{ area.title }}</strong>
+          {{ area.description }}
+        </a>
       </li>
-      <li>
-        <strong>Computational Photography</strong>
-        AI-driven approaches for image formation, enhancement, restoration, and controllable visual generation.
-      </li>
-      <li>
-        <strong>Natural Language Processing</strong>
-        Large-scale language modeling, generation, and reasoning for real-world human-AI applications.
-      </li>
-      <li>
-        <strong>Statistical Machine Learning and HCI Applications</strong>
-        Data-efficient probabilistic methods and interactive AI systems designed to support people and organizations.
-      </li>
+      {% endfor %}
     </ul>
-    <p>Across these areas, the group emphasizes scalable generative modeling techniques, principled learning methods, and deployment-oriented research that bridges foundational ML with high-impact applications.</p>
+    <p>Click any area to jump to its dedicated section with people and publication links.</p>
   </section>
 
   <section class="lab-panel">
@@ -54,16 +45,14 @@ description: Homepage for the Chris Pal Lab, featuring research areas, people, a
 
   <section class="lab-panel">
     <h2>News from the Group</h2>
-    {% assign news_items = site.data.news | sort: "date" | reverse %}
+    {% assign news_items = site.posts | where_exp: "post", "post.categories contains 'news'" %}
     <div class="news-grid">
       {% for item in news_items limit: 3 %}
       <article class="news-card">
         <p class="news-date">{{ item.date | date: "%B %-d, %Y" }}</p>
         <h3>{{ item.title }}</h3>
-        <p>{{ item.summary }}</p>
-        {% if item.link %}
-        <a href="{{ item.link }}">Read more</a>
-        {% endif %}
+        <p>{{ item.summary | default: item.excerpt | strip_html }}</p>
+        <a href="{{ item.url | relative_url }}">Read more</a>
       </article>
       {% endfor %}
     </div>

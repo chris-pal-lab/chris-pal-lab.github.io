@@ -1,11 +1,13 @@
 title: Chris Pal Lab
 email: group@example.edu
+tagline: Machine learning research in language, vision, multimodal systems, and trustworthy AI
 description: >-
   The Chris Pal Lab works on machine learning, natural language processing, computer vision, and generative modeling.
 baseurl: ""
 url: "https://chris-pal-group.github.io"
 domain: "chris-pal-group.github.io"
 lang: en
+locale: en_CA
 timezone: America/Toronto
 
 theme: minima
@@ -19,6 +21,7 @@ exclude:
 
 header_pages:
   - news.md
+  - research-areas.md
   - people.md
   - publications.md
 
@@ -29,8 +32,22 @@ author:
   name: Christopher Pal
 
 logo: /assets/images/headshots/chris_pal.jpeg
+image: /assets/images/headshots/chris_pal.jpeg
 
 social:
   name: Chris Pal Lab
   links:
     - https://github.com/chris-pal-group
+    - https://www.polymtl.ca/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/headshots/chris_pal.jpeg
+      lang: en_CA
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image: /assets/images/headshots/chris_pal.jpeg
