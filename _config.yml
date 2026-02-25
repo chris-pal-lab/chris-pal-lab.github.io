@@ -1,14 +1,18 @@
 title: Chris Pal Research Group
 email: group@example.edu
 description: >-
-  Research group website scaffold for projects, publications, people, and announcements.
+  The Chris Pal Research Group works on machine learning, natural language processing, computer vision, and generative modeling.
 baseurl: ""
 url: "https://chris-pal-group.github.io"
 domain: "chris-pal-group.github.io"
+lang: en
+timezone: America/Toronto
 
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - bibtex/
@@ -17,7 +21,16 @@ header_pages:
   - news.md
   - people.md
   - publications.md
-  - projects.md
 
 twitter_username: research_group
 github_username: chris-pal-group
+
+author:
+  name: Christopher Pal
+
+logo: /assets/images/headshots/chris_pal.jpeg
+
+social:
+  name: Chris Pal Research Group
+  links:
+    - https://github.com/chris-pal-group

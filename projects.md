@@ -2,6 +2,7 @@
 layout: page
 title: Major Projects
 permalink: /projects/
+published: false
 ---
 
 <div class="projects-page">

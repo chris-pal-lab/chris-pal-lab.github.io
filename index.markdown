@@ -2,6 +2,7 @@
 layout: default
 title: Home
 permalink: /
+description: Homepage for the Chris Pal Research Group, featuring research areas, people, and recent news.
 ---
 
 <div class="lab-home">
@@ -12,7 +13,7 @@ permalink: /
     <div class="hero-links">
       <a class="button-link" href="{{ '/people/' | relative_url }}">Meet the Team</a>
       <a class="button-link" href="{{ '/publications/' | relative_url }}">Browse Publications</a>
-      <a class="button-link" href="{{ '/projects/' | relative_url }}">See Major Projects</a>
+      <a class="button-link" href="{{ '/news/' | relative_url }}">Group News</a>
     </div>
   </section>
 
@@ -52,8 +53,9 @@ permalink: /
 
   <section class="lab-panel">
     <h2>News from the Group</h2>
+    {% assign news_items = site.data.news | sort: "date" | reverse %}
     <div class="news-grid">
-      {% for item in site.data.news %}
+      {% for item in news_items limit: 3 %}
       <article class="news-card">
         <p class="news-date">{{ item.date | date: "%B %-d, %Y" }}</p>
         <h3>{{ item.title }}</h3>

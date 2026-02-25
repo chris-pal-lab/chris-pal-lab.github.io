@@ -2,6 +2,7 @@
 layout: page
 title: News
 permalink: /news/
+description: Archive of announcements and updates from the Chris Pal Research Group.
 ---
 
 <div class="publications-page">
