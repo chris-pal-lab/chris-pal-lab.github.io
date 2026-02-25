@@ -18,6 +18,17 @@ description: Homepage for the Chris Pal Lab, featuring research areas, people, a
   </section>
 
   <section class="lab-panel">
+    <h2>Principal Investigator</h2>
+    <div class="pi-card">
+      <img class="pi-headshot" src="{{ '/assets/images/headshots/chris_pal.jpeg' | relative_url }}" alt="Headshot of Christopher Pal">
+      <div class="pi-bio">
+        <p><strong>Christopher Pal</strong> is a Canada CIFAR AI Chair, full professor at Polytechnique Montréal, and adjunct professor in the Department of Computer Science and Operations Research (DIRO) at Université de Montréal. He is also a Distinguished Scientist at ServiceNow Research.</p>
+        <p>Pal has been involved in AI and machine learning research for over twenty-five years and has published extensively on large-scale language modelling methods and generative modelling techniques. He holds a PhD in computer science from the University of Waterloo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-panel">
     <h2>Research Focus</h2>
     <ul class="focus-list">
       {% for area in site.data.research_areas %}
@@ -30,17 +41,6 @@ description: Homepage for the Chris Pal Lab, featuring research areas, people, a
       {% endfor %}
     </ul>
     <p>Click any area to jump to its dedicated section with people and publication links.</p>
-  </section>
-
-  <section class="lab-panel">
-    <h2>Principal Investigator</h2>
-    <div class="pi-card">
-      <img class="pi-headshot" src="{{ '/assets/images/headshots/chris_pal.jpeg' | relative_url }}" alt="Headshot of Christopher Pal">
-      <div class="pi-bio">
-        <p><strong>Christopher Pal</strong> is a Canada CIFAR AI Chair, full professor at Polytechnique Montréal, and adjunct professor in the Department of Computer Science and Operations Research (DIRO) at Université de Montréal. He is also a Distinguished Scientist at ServiceNow Research.</p>
-        <p>Pal has been involved in AI and machine learning research for over twenty-five years and has published extensively on large-scale language modelling methods and generative modelling techniques. He holds a PhD in computer science from the University of Waterloo.</p>
-      </div>
-    </div>
   </section>
 
   <section class="lab-panel">
