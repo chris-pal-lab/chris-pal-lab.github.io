@@ -6,7 +6,7 @@ description: Publications from the Chris Pal Lab, searchable and organized by ye
 ---
 
 <div class="publications-page">
-  <p class="page-intro">Global publication list for the lab. Entries are placeholders and can be replaced with final paper details.</p>
+  <p class="page-intro">Global publication list for the lab.</p>
 
   {% assign publications_sorted = site.data.publications | sort: "year" | reverse %}
 

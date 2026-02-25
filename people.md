@@ -6,7 +6,7 @@ description: Faculty, postdocs, students, and collaborators in the Chris Pal Lab
 ---
 
 <div class="people-page">
-  <p class="page-intro">Members of the research group. All content below is placeholder text.</p>
+  <p class="page-intro">Members of the research group.</p>
 
   <nav class="people-tabs" aria-label="People Sections">
     {% for section in site.data.people.sections %}
