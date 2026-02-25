@@ -1,0 +1,14 @@
+- name: Project Atlas
+  overview: Placeholder overview for a major project on scalable multimodal models and reasoning benchmarks.
+  status: Active
+  team: Faculty + Postdocs + PhD Students
+
+- name: Project Beacon
+  overview: Placeholder overview for a major project on trustworthy AI methods and uncertainty-aware systems.
+  status: Active
+  team: Postdocs + PhD Students
+
+- name: Project Catalyst
+  overview: Placeholder overview for a major project on data-centric pipelines for scientific AI.
+  status: In planning
+  team: Faculty + MSc Students + Interns

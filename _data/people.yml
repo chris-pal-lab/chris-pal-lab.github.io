@@ -1,0 +1,164 @@
+sections:
+  - title: Faculty
+    members:
+      - name: Prof. Chris Pal
+        role: Principal Investigator
+        headshot: /assets/images/headshots/chris_pal.jpeg
+        blurb: Placeholder bio for the main faculty lead of the group.
+        focus: Foundation models, representation learning, and robust ML systems.
+        links: {}
+
+  - title: Postdocs
+    members:
+      - name: Gaurav Sahu
+        role: Postdoc
+        email: sahu.gaurav719@gmail.com
+        headshot: /assets/images/headshots/gaurav_sahu.jpg
+        blurb: Group researcher and mentor.
+        focus: Working on an AI co-scientist to accelerate scientific discovery.
+        links:
+          github: https://github.com/demfier
+          twitter: https://x.com/dem_fier
+          website: https://demfier.github.io
+          scholar: https://scholar.google.com/citations?user=nMAt7UMAAAAJ&hl=en
+      - name: Florian Golemo
+        role: Postdoc
+        email: fgolemo@gmail.com
+        headshot: /assets/images/headshots/florian_golemo.jpg
+        blurb: Group researcher and mentor.
+        focus: Turning robot dogs into guide dogs for blind/low-vision people.
+        links: {}
+      - name: Martin Weiss
+        role: Postdoc
+        email: martin@tiptreesystems.com
+        headshot: /assets/images/headshots/martin_weiss.png
+        blurb: Group researcher and mentor.
+        focus: Building an agentic network of AI researchers.
+        links:
+          github: https://github.com/mweiss17
+          twitter: https://x.com/martincsweiss1
+          website: https://martincsweiss.com/
+          scholar: https://scholar.google.com/citations?user=t7lQYWwAAAAJ&hl=en
+
+  - title: PhD Students
+    members:
+      - name: Mattie Tesfaldet
+        role: PhD
+        email: tesfaldet@hotmail.com
+        headshot: /assets/images/headshots/mattie_tesfaldet.jpg
+        blurb: Doctoral researcher in the group.
+        focus: Working on various topics covering motion analysis, collective intelligence, and generative modelling.
+        note: "Check out a non-profit I co-manage: https://n10.as"
+        links:
+          github: https://github.com/tesfaldet
+          twitter: https://x.com/mattierialgirl
+          website: https://mtesfaldet.net
+          bluesky: https://bsky.app/profile/mattierial.bsky.social
+          scholar: https://scholar.google.com/citations?user=YzE4q2gAAAAJ&hl=en
+      - name: Matthew Wiens
+        role: PhD
+        email: matthew.wiens@mila.quebec
+        headshot: /assets/images/headshots/matthew_wiens.png
+        blurb: Doctoral researcher in the group.
+        focus: Interested in reasoning models and adaptive computation.
+        links:
+          github: https://github.com/MatthewWiens101
+      - name: Juan Rodriguez
+        role: PhD
+        email: juan.rodriguez@mila.quebec
+        headshot: /assets/images/headshots/joan_rodriguez.jpeg
+        blurb: Doctoral researcher in the group.
+        focus: Working on multimodal models and vector graphics generation.
+        links:
+          github: https://github.com/joanrod
+          twitter: https://x.com/joanrod_ai
+          website: https://joanrod.github.io/
+          scholar: https://scholar.google.com/citations?user=0selhb4AAAAJ
+      - name: Chris Emezue
+        role: PhD
+        email: chris.emezue@mila.quebec
+        headshot: /assets/images/headshots/chris_emezue.jpg
+        blurb: Doctoral researcher in the group.
+        focus: Working on the intersection of NLP, RL and causality to build reliable AI for humanity.
+        links:
+          github: https://github.com/chrisemezue
+          twitter: https://twitter.com/ChrisEmezue
+          website: https://chrisemezue.github.io/
+          scholar: https://scholar.google.com/citations?user=PBHOsekAAAAJ&hl=en&oi=ao
+          linkedin: https://www.linkedin.com/in/chrisemezue/
+      - name: Olga Luo
+        role: PhD
+        email: olga.xu823@gmail.com
+        headshot: /assets/images/headshots/olga_luo.jpg
+        blurb: Doctoral researcher in the group.
+        focus: My research focuses on generative video modelling and 3D vision.
+        links:
+          github: https://github.com/oooolga
+          website: https://olga-luo.com/
+          scholar: https://scholar.google.com/citations?user=bJqShBAAAAAJ
+      - name: Joel Ruben Antony Moniz
+        role: PhD
+        email: joel.moniz@mila.quebec
+        headshot: /assets/images/headshots/joel_moniz.jpeg
+        blurb: Doctoral researcher in the group.
+        focus: Embodied AI and Multimodal Machine Learning, particularly affordance estimation, vision-and-language navigation, and the representation and reconstruction of dynamic scenes.
+        links:
+          github: https://github.com/joelmoniz
+          twitter: https://x.com/joelramoniz
+          linkedin: https://www.linkedin.com/in/joelmoniz
+          scholar: https://scholar.google.com/citations?user=AjpOYxAAAAAJ&hl=en
+
+  - title: MSc Students
+    members:
+      - name: Michelle Lin
+        role: MSc
+        email: michelle.lin@mila.quebec
+        headshot: /assets/images/headshots/michelle_lin.jpg
+        blurb: Master's researcher in the group.
+        focus: Interpretable diffusion methods for environmental recovery.
+        links:
+          github: https://github.com/mchll-ln
+          twitter: https://x.com/xmichellelinx
+          website: https://mchll-ln.github.io
+          bluesky: https://bsky.app/profile/mchll-ln.bsky.social
+          scholar: https://scholar.google.com/citations?user=ThOrOBoAAAAJ&hl=en&authuser=1
+      - name: Hugo Baudchon
+        role: MSc
+        email: hugo.baudchon@mila.quebec
+        headshot: /assets/images/headshots/hugo_baudchon.jpeg
+        blurb: Master's researcher in the group.
+        focus: I work on forest monitoring (tree detection and biodiversity mapping) using high resolution drone imagery.
+        links:
+          github: https://github.com/hugobaudchon
+          scholar: https://scholar.google.com/citations?user=cr5LJZ4AAAAJ&hl=fr&oi=ao
+      - name: Yousef Kotp
+        role: MSc
+        email: yousefkotp@outlook.com
+        headshot: /assets/images/headshots/yousef_kotp.jpeg
+        blurb: Master's researcher in the group.
+        focus: Working on Deep Learning for Computational Pathology.
+        links:
+          github: https://github.com/yousefkotp
+          twitter: https://twitter.com/@kotpazz
+          website: https://www.yousefkotp.com/
+          scholar: https://scholar.google.com/citations?user=YMSkXbEAAAAJ&hl=en
+          linkedin: https://www.linkedin.com/in/yousef-kotp/
+
+  - title: Collaborators
+    members:
+      - name: Mai Ababneh
+        role: Collaborator
+        email: mai.ababneh@mila.quebec
+        headshot: /assets/images/headshots/mai_ababneh.png
+        blurb: External collaborator working with the group.
+        focus: Developing navigation assistive technology for the Blind and Visually Impaired community.
+        links: {}
+      - name: Can (Sam) Chen
+        role: Collaborator
+        email: chencan421@gmail.com
+        headshot: /assets/images/headshots/can_chen.jpeg
+        blurb: External collaborator working with the group.
+        focus: Neural Scaling Laws, Multimodal Learning, Reinforcement Learning, and Model-Based Optimization.
+        links:
+          twitter: https://x.com/chencan421
+          linkedin: https://ca.linkedin.com/in/can-chen-018851202

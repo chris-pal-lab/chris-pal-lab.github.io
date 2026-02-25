@@ -1,0 +1,42 @@
+---
+- title: 'AInstein: Assessing the Feasibility of AI-Generated Approaches to Research
+    Problems'
+  authors: Mishra*, Shambhavi and Sahu*, Gaurav and Pedersoli, Marco and Charlin,
+    Laurent and Dolz, Jose and Pal, Christopher
+  year: 2025
+  venue: Women in Machine Learning Workshop@ NeurIPS 2025
+  venues:
+  - Women in Machine Learning Workshop@ NeurIPS 2025
+  - arXiv preprint arXiv:2510.05432
+  arxiv: https://arxiv.org/abs/2510.05432
+- title: 'LitLLMs, LLMs for Literature Review: Are we there yet?'
+  authors: Agarwal*, Shubham and Sahu*, Gaurav and Puri*, Abhay and Laradji, Issam
+    H and Dvijotham, Krishnamurthy Dj and Stanley, Jason and Charlin, Laurent and
+    Pal, Christopher
+  year: 2025
+  venue: Transactions on Machine Learning Research
+  venues:
+  - Transactions on Machine Learning Research
+  - arXiv preprint arXiv:2412.15249
+  arxiv: https://arxiv.org/abs/2412.15249
+- title: 'ReviewerToo: Should AI Join The Program Committee? A Look At The Future
+    of Peer Review'
+  authors: Sahu, Gaurav and Larochelle, Hugo and Charlin, Laurent and Pal, Christopher
+  year: 2025
+  venue: arXiv preprint arXiv:2510.08867
+  arxiv: https://arxiv.org/abs/2510.08867
+- title: Unsupervised depth estimation, 3d face rotation and replacement
+  authors: Moniz, Joel Ruben Antony and Beckham, Christopher and Rajotte, Simon and
+    Honari, Sina and Pal, Chris
+  year: 2018
+  venue: Advances in neural information processing systems
+- title: Deep Convolutional Networks with Non-convolutional Recurrent Memory for Structured
+    Prediction
+  authors: Moniz, Joel Ruben Antony and Pal, Christopher
+  year: 2017
+  venue: Workshop on Deep Structured Prediction, ICML 2017
+- title: Convolutional residual memory networks
+  authors: Moniz, Joel and Pal, Christopher
+  year: 2016
+  venue: arXiv preprint arXiv:1606.05262
+  arxiv: https://arxiv.org/abs/1606.05262
