@@ -6,6 +6,14 @@ sections:
         headshot: /assets/images/headshots/chris_pal.jpeg
         blurb: Placeholder bio for the main faculty lead of the group.
         focus: Foundation models, representation learning, and robust ML systems.
+        tags:
+          - llm
+          - nlp
+          - multimodal
+          - vision
+          - generative-modeling
+          - scientific-ai
+          - trustworthy-ai
         links: {}
 
   - title: Postdocs
@@ -16,6 +24,10 @@ sections:
         headshot: /assets/images/headshots/gaurav_sahu.jpg
         blurb: Group researcher and mentor.
         focus: Working on an AI co-scientist to accelerate scientific discovery.
+        tags:
+          - scientific-ai
+          - agentic-ai
+          - llm
         links:
           github: https://github.com/demfier
           twitter: https://x.com/dem_fier
@@ -27,6 +39,9 @@ sections:
         headshot: /assets/images/headshots/florian_golemo.jpg
         blurb: Group researcher and mentor.
         focus: Turning robot dogs into guide dogs for blind/low-vision people.
+        tags:
+          - embodied-ai
+          - accessibility
         links: {}
       - name: Martin Weiss
         role: Postdoc
@@ -34,6 +49,9 @@ sections:
         headshot: /assets/images/headshots/martin_weiss.png
         blurb: Group researcher and mentor.
         focus: Building an agentic network of AI researchers.
+        tags:
+          - agentic-ai
+          - scientific-ai
         links:
           github: https://github.com/mweiss17
           twitter: https://x.com/martincsweiss1
@@ -48,6 +66,9 @@ sections:
         headshot: /assets/images/headshots/mattie_tesfaldet.jpg
         blurb: Doctoral researcher in the group.
         focus: Working on various topics covering motion analysis, collective intelligence, and generative modelling.
+        tags:
+          - multimodal
+          - generative-modeling
         note: "Check out a non-profit I co-manage: https://n10.as"
         links:
           github: https://github.com/tesfaldet
@@ -61,6 +82,9 @@ sections:
         headshot: /assets/images/headshots/matthew_wiens.png
         blurb: Doctoral researcher in the group.
         focus: Interested in reasoning models and adaptive computation.
+        tags:
+          - llm
+          - reasoning
         links:
           github: https://github.com/MatthewWiens101
       - name: Juan Rodriguez
@@ -69,6 +93,10 @@ sections:
         headshot: /assets/images/headshots/joan_rodriguez.jpeg
         blurb: Doctoral researcher in the group.
         focus: Working on multimodal models and vector graphics generation.
+        tags:
+          - multimodal
+          - generative-modeling
+          - graphics
         links:
           github: https://github.com/joanrod
           twitter: https://x.com/joanrod_ai
@@ -80,6 +108,11 @@ sections:
         headshot: /assets/images/headshots/chris_emezue.jpg
         blurb: Doctoral researcher in the group.
         focus: Working on the intersection of NLP, RL and causality to build reliable AI for humanity.
+        tags:
+          - nlp
+          - reinforcement-learning
+          - trustworthy-ai
+          - robustness
         links:
           github: https://github.com/chrisemezue
           twitter: https://twitter.com/ChrisEmezue
@@ -92,6 +125,10 @@ sections:
         headshot: /assets/images/headshots/olga_luo.jpg
         blurb: Doctoral researcher in the group.
         focus: My research focuses on generative video modelling and 3D vision.
+        tags:
+          - vision
+          - video
+          - generative-modeling
         links:
           github: https://github.com/oooolga
           website: https://olga-luo.com/
@@ -102,6 +139,10 @@ sections:
         headshot: /assets/images/headshots/joel_moniz.jpeg
         blurb: Doctoral researcher in the group.
         focus: Embodied AI and Multimodal Machine Learning, particularly affordance estimation, vision-and-language navigation, and the representation and reconstruction of dynamic scenes.
+        tags:
+          - embodied-ai
+          - multimodal
+          - navigation
         links:
           github: https://github.com/joelmoniz
           twitter: https://x.com/joelramoniz
@@ -113,6 +154,11 @@ sections:
         headshot: /assets/images/headshots/aristides_milios.jpg
         blurb: Doctoral researcher in the group.
         focus: Working on LLM introspection and self-modeling for robustness and safety.
+        tags:
+          - llm
+          - introspection
+          - robustness
+          - safety
         links:
           github: https://github.com/amilios
           website: https://atmilios.com/
@@ -127,6 +173,9 @@ sections:
         headshot: /assets/images/headshots/michelle_lin.jpg
         blurb: Master's researcher in the group.
         focus: Interpretable diffusion methods for environmental recovery.
+        tags:
+          - generative-modeling
+          - environment
         links:
           github: https://github.com/mchll-ln
           twitter: https://x.com/xmichellelinx
@@ -139,6 +188,9 @@ sections:
         headshot: /assets/images/headshots/hugo_baudchon.jpeg
         blurb: Master's researcher in the group.
         focus: I work on forest monitoring (tree detection and biodiversity mapping) using high resolution drone imagery.
+        tags:
+          - environment
+          - vision
         links:
           github: https://github.com/hugobaudchon
           scholar: https://scholar.google.com/citations?user=cr5LJZ4AAAAJ&hl=fr&oi=ao
@@ -148,6 +200,8 @@ sections:
         headshot: /assets/images/headshots/yousef_kotp.jpeg
         blurb: Master's researcher in the group.
         focus: Working on Deep Learning for Computational Pathology.
+        tags:
+          - health
         links:
           github: https://github.com/yousefkotp
           twitter: https://twitter.com/@kotpazz
@@ -163,6 +217,8 @@ sections:
         headshot: /assets/images/headshots/mai_ababneh.png
         blurb: External collaborator working with the group.
         focus: Developing navigation assistive technology for the Blind and Visually Impaired community.
+        tags:
+          - accessibility
         links:
           github: https://github.com/joyous-porpoisem
       - name: Can (Sam) Chen
@@ -171,6 +227,9 @@ sections:
         headshot: /assets/images/headshots/can_chen.jpeg
         blurb: External collaborator working with the group.
         focus: Neural Scaling Laws, Multimodal Learning, Reinforcement Learning, and Model-Based Optimization.
+        tags:
+          - multimodal
+          - reinforcement-learning
         links:
           twitter: https://x.com/chencan421
           linkedin: https://ca.linkedin.com/in/can-chen-018851202

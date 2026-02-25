@@ -20,6 +20,13 @@ description: Research area overview for the Chris Pal Lab, with links to people 
   <section id="{{ area.title | slugify }}" class="lab-panel area-section">
     <h2>{{ area.title }}</h2>
     <p>{{ area.description }}</p>
+    {% if area.tags %}
+    <div class="area-tag-row" aria-label="Area tags">
+      {% for tag in area.tags %}
+      <span class="tag-chip area-tag-chip">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
 
     <div class="areas-grid">
       <article class="area-card">
@@ -28,17 +35,21 @@ description: Research area overview for the Chris Pal Lab, with links to people 
           {% assign area_people_count = 0 %}
           {% for section in site.data.people.sections %}
             {% for person in section.members %}
-              {% assign focus_text = person.focus | default: "" | downcase %}
               {% assign person_match = false %}
-              {% for keyword in area.keywords %}
-                {% if focus_text contains keyword %}
-                  {% assign person_match = true %}
-                  {% break %}
-                {% endif %}
-              {% endfor %}
+              {% if person.tags %}
+                {% for tag in person.tags %}
+                  {% if area.tags contains tag %}
+                    {% assign person_match = true %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
               {% if person_match %}
               {% assign area_people_count = area_people_count | plus: 1 %}
-              <li><strong>{{ person.name }}</strong> <span class="area-meta">({{ person.role }})</span></li>
+              <li>
+                <strong>{{ person.name }}</strong>
+                <span class="area-meta">({{ person.role }})</span>
+              </li>
               {% endif %}
             {% endfor %}
           {% endfor %}
@@ -56,7 +67,7 @@ description: Research area overview for the Chris Pal Lab, with links to people 
             {% assign pub_match = false %}
             {% if publication.tags %}
               {% for tag in publication.tags %}
-                {% if area.publication_tags contains tag %}
+                {% if area.tags contains tag %}
                   {% assign pub_match = true %}
                   {% break %}
                 {% endif %}

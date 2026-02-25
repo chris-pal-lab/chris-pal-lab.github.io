@@ -415,6 +415,25 @@ a:hover {
   margin-top: 0.6rem;
 }
 
+.area-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.4rem 0 0.85rem;
+}
+
+.area-tag-chip {
+  background: #e9f4fb;
+  border-color: #c7dfef;
+  color: #1d5f7f;
+}
+
+[data-theme="dark"] .area-tag-chip {
+  background: #1f3447;
+  border-color: #3d5d79;
+  color: #b7def7;
+}
+
 .people-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -505,6 +524,13 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.45rem;
   margin-top: 0.7rem;
+}
+
+.person-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
 }
 
 .link-chip {

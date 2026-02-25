@@ -26,7 +26,7 @@ description: Faculty, postdocs, students, and collaborators in the Chris Pal Lab
     <div class="people-grid">
       {% for person in section.members %}
       {% assign search_email = person.email | default: '' | downcase | replace: '.', ' [dot] ' | replace: '@', ' [at] ' %}
-      <article class="person-card" data-search="{{ person.name | default: '' | downcase | escape }} {{ person.role | default: '' | downcase | escape }} {{ person.focus | default: '' | downcase | escape }} {{ search_email | escape }}">
+      <article class="person-card" data-search="{{ person.name | default: '' | downcase | escape }} {{ person.role | default: '' | downcase | escape }} {{ person.focus | default: '' | downcase | escape }} {{ search_email | escape }} {{ person.tags | join: ' ' | downcase | escape }}">
         {% if person.headshot %}
         <img class="person-headshot" src="{{ person.headshot | relative_url }}" alt="Headshot of {{ person.name }}">
         {% endif %}
@@ -39,6 +39,13 @@ description: Faculty, postdocs, students, and collaborators in the Chris Pal Lab
         <p class="person-email">{{ email_user }} [at] {{ email_domain }}</p>
         {% endif %}
         <p><strong>Working on:</strong> {{ person.focus }}</p>
+        {% if person.tags %}
+        <div class="person-tags">
+          {% for tag in person.tags %}
+          <span class="tag-chip">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
         <div class="person-links">
           {% if person.links.github %}<a class="link-chip" href="{{ person.links.github }}">GitHub</a>{% endif %}
           {% if person.links.website %}<a class="link-chip" href="{{ person.links.website }}">Website</a>{% endif %}
